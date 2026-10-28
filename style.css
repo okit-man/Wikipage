@@ -19,12 +19,17 @@ body{
     
     text-align: center;
     margin: 4rem auto 3rem;
+    /* width: 40%; */
     width: 500px;
-    font-size: 1rem;
-    font-width: 300px;
+
+    /* max-width: 750px; */
+
+    /* font-size: 1rem; */
+    /* font-width: 300px; */
 }
-.central-fetured-logo {
+.central-featured-logo {
     margin-bottom: 1rem;
+    object-fit: cover;
 }
 .central-text-wrapper {
     display: inline-block;
@@ -38,11 +43,12 @@ body{
 }
 .cental-small-text-logo {
     font-family: 'Times New Roman', Times, serif;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     
 }
 .form {
     background-color: #f1f1f1;
+    box-shadow:  0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
     margin: 3.5rem auto 1rem;
     /* margin: 4rem auto 1.95rem; */
     padding: 2rem 3rem;
@@ -58,7 +64,7 @@ body{
 }
 .search-input {
     display: inline-block;
-    width: 75%;
+    width: 80%;
     height: 2.4rem;
     padding: 0.5rem;
     border: transparent;
@@ -85,20 +91,30 @@ body{
 }
 .result {
     display: grid;
-    flex-direction: column;
+    /* flex-direction: column; */
     grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
     margin: 0 4rem;
+
+    width: 90vw;
+    max-width: 1170px;
+    margin: 0 auto;
     
     /* both cant work */
     /* max-width: 500px;
     width: 400px; */
 }
 .result-container{  
+    /* this don't work */
+    /* display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem; */
     /* max-width: 500px; */
     /* width: 380px; */
     /* height: 300px; */
+    
     margin-bottom: 2rem;
+
     /* padding: 2rem; */
     /* margin: 0 auto; */
 
@@ -113,7 +129,7 @@ body{
     border-radius: 0.5rem;
     cursor: pointer;
 
-    max-width: 500px;
+    /* max-width: 500px; */
 }
 .result-container a:hover {
     background-color: #222;
@@ -144,51 +160,72 @@ p {
 @media screen and (max-width: 992px) {
 
     .central-logo {
-         /* background-color: red; */
-        width: 450px;
+         /* background-color: skyblue; */
+        /* width: 40%; */
+         /* max-width: 700px; */
+         width: 490px;
     }
     .central-text-wrapper {
-        font-size: 1.3rem;
-        letter-spacing: 0.2rem;
-        line-height: 1.3;
+        /* font-size: 1.3rem; */
+        /* letter-spacing: 0.2rem; */
+        line-height: 1;
+    }
+    .central-text-logo {
+       font-size: 1.8rem; 
+       letter-spacing: 0.2rem;
     }
     .cental-small-text-logo {
         font-size: 1.2rem;
     }
+    .search-input {
+        width: 75%;
+    }
     .result {
-        grid-template-columns: repeat(3, 1fr)
+        grid-template-columns: repeat(3, 1fr);
+        width: 85vw;
+        max-width: 1110;
     }
     .result-container a  {
-         max-width: 450px;
+         /* max-width: 450px; */
     }
 }
 
 @media screen and (max-width: 768px) {
     .central-logo {
-        /* background-color: red; */
-        width: 420px;
+        /* background-color: rebeccapurple; */
+        width: 440px;
     }
-    .central-text-wrapper {
-        font-size: 1.2rem;
-        letter-spacing: 0.1rem;
+    .central-text-logo {
+        font-size: 1.5rem;
+        letter-spacing: 0.15rem;
+    }
+     .cental-small-text-logo {
+        font-size: 1.1rem;
+    }
+     .search-input {
+        width: 70%;
     }
     .result {
-        grid-template-columns: repeat(2, 1fr)
+        grid-template-columns: repeat(2, 1fr);
+        width: 80vw;
+        max-width: 1100;
     }
-    .result-container a {
-        max-width: 420px;
-    }
+   
 }
 
 @media screen and (max-width: 400px) {
     .central-logo {
-        background-color: red;
+        /* background-color: wheat; */
+        width: 360px;
     }
     .result {
         grid-template-columns: repeat(1, 1fr);
+        width: 90vw;
+        max-width: 1100px;
     }
-    .result-container a {
-        max-width: 500px;
+      .search-input {
+        width: 75%;
     }
+   
     
 }
